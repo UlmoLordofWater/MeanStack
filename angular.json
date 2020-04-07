@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "MeanCourse": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MeanCourse"
+    }
+  },
+  "defaultProject": "MeanCourse",
+  "cli": {
+    "analytics": "7d0c0b32-746d-4244-a3df-8dc93dec0f54"
+  }
 }
