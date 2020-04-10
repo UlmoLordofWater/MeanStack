@@ -8,3 +8,7 @@
   font-size: 1rem;
   font-weight: bold;
 }
+
+mat-spinner {
+  margin: auto;
+}
