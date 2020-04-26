@@ -1,6 +1,6 @@
 const Post = require('../models/post');
 
-exports.createPost = 
+exports.createPost =
 (req, res, next) => {
 const url = req.protocol + '://' + req.get("host");
 const post = new Post({
@@ -38,9 +38,10 @@ exports.updatePost = (req, res, next) => {
     imagePath: imagePath,
     creator: req.userData.userId
   });
+  console.log(post);
   Post.updateOne({_id: req.params.id, creator: req.userData.userId }, post)
     .then(result => {
-      if (result.nModified > 0) {
+      if (result.n > 0) {
         res.status(200).json({message: 'Update successful!'});
       } else {
         res.status(401).json({message: 'Not Authorized!'});
